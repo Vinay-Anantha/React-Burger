@@ -1,10 +1,13 @@
 import React from "react";
-import cssObj from "./Burger.Module.css";
+import cssObj from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 const burger = () => {
   return (
     <div className={cssObj.Burger}>
-      <div></div>
+      <BurgerIngredient type="bread-top" />
+      <BurgerIngredient type="cheese" />
+      <BurgerIngredient type="meat1" />
+      <BurgerIngredient type="bread-bottom" />
     </div>
   );
 };
