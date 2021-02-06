@@ -90,7 +90,7 @@
 
 .Cheese {
   width: 90%;
-  height: 4.5%;
+  height: 4%;
   margin: 2% auto;
   background: linear-gradient(#f4d004, #d6bb22);
   border-radius: 20px;
@@ -98,7 +98,7 @@
 
 .Salad {
   width: 85%;
-  height: 7%;
+  height: 2.5%;
   margin: 2% auto;
   background: linear-gradient(#228c1d, #91ce50);
   border-radius: 20px;
