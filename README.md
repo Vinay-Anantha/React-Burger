@@ -1,3 +1,3 @@
 # React-Burger
 A basic React app to buy burgers.
-<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<img src="https://www.flaticon.com/svg/vstatic/svg/3075/3075929.svg?token=exp=1612685896~hmac=5622b900abdb2c75a6e22bc2453d3163"/>
