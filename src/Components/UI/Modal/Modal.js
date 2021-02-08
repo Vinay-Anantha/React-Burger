@@ -6,7 +6,10 @@ import Backdrop from "../Backdrop/Backdrop";
 //this also prevents OrderSummary from getting rendered when Modal is not visible in BurgerBuilder
 class Modal extends Component {
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show;
+    return (
+      nextProps.show !== this.props.show ||
+      nextProps.children !== this.props.children
+    );
   }
   render() {
     return (
