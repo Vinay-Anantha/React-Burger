@@ -30,7 +30,7 @@ class ContactData extends Component {
       .post("/orders.json", order)
       .then((response) => {
         this.setState({ loading: false });
-        this.props.history.replace("/");
+        this.props.history.replace("/orders");
       })
       .catch((error) => this.setState({ loading: false }));
   };
