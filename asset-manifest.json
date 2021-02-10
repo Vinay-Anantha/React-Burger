@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/React-Burger/static/css/main.c052d5d4.chunk.css",
-    "main.js": "/React-Burger/static/js/main.f1487de9.chunk.js",
-    "main.js.map": "/React-Burger/static/js/main.f1487de9.chunk.js.map",
+    "main.css": "/React-Burger/static/css/main.644d35ff.chunk.css",
+    "main.js": "/React-Burger/static/js/main.1ed9921d.chunk.js",
+    "main.js.map": "/React-Burger/static/js/main.1ed9921d.chunk.js.map",
     "runtime-main.js": "/React-Burger/static/js/runtime-main.2d36f0a5.js",
     "runtime-main.js.map": "/React-Burger/static/js/runtime-main.2d36f0a5.js.map",
-    "static/js/2.9fd753bc.chunk.js": "/React-Burger/static/js/2.9fd753bc.chunk.js",
-    "static/js/2.9fd753bc.chunk.js.map": "/React-Burger/static/js/2.9fd753bc.chunk.js.map",
+    "static/js/2.aad01f6c.chunk.js": "/React-Burger/static/js/2.aad01f6c.chunk.js",
+    "static/js/2.aad01f6c.chunk.js.map": "/React-Burger/static/js/2.aad01f6c.chunk.js.map",
     "index.html": "/React-Burger/index.html",
-    "static/css/main.c052d5d4.chunk.css.map": "/React-Burger/static/css/main.c052d5d4.chunk.css.map",
-    "static/js/2.9fd753bc.chunk.js.LICENSE.txt": "/React-Burger/static/js/2.9fd753bc.chunk.js.LICENSE.txt",
+    "static/css/main.644d35ff.chunk.css.map": "/React-Burger/static/css/main.644d35ff.chunk.css.map",
+    "static/js/2.aad01f6c.chunk.js.LICENSE.txt": "/React-Burger/static/js/2.aad01f6c.chunk.js.LICENSE.txt",
     "static/media/burger-logo.ec69c7f6.png": "/React-Burger/static/media/burger-logo.ec69c7f6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2d36f0a5.js",
-    "static/js/2.9fd753bc.chunk.js",
-    "static/css/main.c052d5d4.chunk.css",
-    "static/js/main.f1487de9.chunk.js"
+    "static/js/2.aad01f6c.chunk.js",
+    "static/css/main.644d35ff.chunk.css",
+    "static/js/main.1ed9921d.chunk.js"
   ]
 }
