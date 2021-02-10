@@ -16,11 +16,11 @@ class BurgerIngredient extends Component {
       case "salad":
         ingredient = <div className={cssObj.Salad}></div>;
         break;
-      case "meat1":
-        ingredient = <div className={cssObj.Meat1}></div>;
+      case "meatA":
+        ingredient = <div className={cssObj.MeatA}></div>;
         break;
-      case "meat2":
-        ingredient = <div className={cssObj.Meat2}></div>;
+      case "meatB":
+        ingredient = <div className={cssObj.MeatB}></div>;
         break;
       case "cheese":
         ingredient = <div className={cssObj.Cheese}></div>;

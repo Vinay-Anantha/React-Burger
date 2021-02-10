@@ -80,7 +80,7 @@
   box-shadow: inset 1px 3px #c9c9c9;
 }
 
-.Meat1 {
+.MeatA {
   width: 80%;
   height: 8%;
   background: linear-gradient(#7f3608, #702e05);
@@ -104,7 +104,7 @@
   border-radius: 20px;
 }
 
-.Meat2 {
+.MeatB {
   width: 80%;
   height: 3%;
   background: linear-gradient(#bf3813, #c45e38);

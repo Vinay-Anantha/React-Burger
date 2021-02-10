@@ -9,9 +9,9 @@ import axios from "../../axios-orders";
 
 const INGREDIENT_PRICE = {
   salad: 10,
-  meat2: 40,
+  meatB: 40,
   cheese: 20,
-  meat1: 30
+  meatA: 30
 };
 class BurgerBuilder extends Component {
   state = {

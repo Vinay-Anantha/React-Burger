@@ -7,12 +7,12 @@ const controls = [
     type: "salad"
   },
   {
-    label: "Meat1",
-    type: "meat1"
+    label: "MeatA",
+    type: "meatA"
   },
   {
-    label: "Meat2",
-    type: "meat2"
+    label: "MeatB",
+    type: "meatB"
   },
   {
     label: "Cheese",
