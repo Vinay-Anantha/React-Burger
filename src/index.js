@@ -6,7 +6,7 @@ import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/React-Burger">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
