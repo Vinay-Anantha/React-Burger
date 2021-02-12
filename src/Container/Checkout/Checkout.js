@@ -25,7 +25,9 @@ class Checkout extends Component {
       }
       ingredients[param[0]] = +param[1];
     }
-    this.setState({ ingredients: ingredients, totalPrice: price });
+    const removeProp = "price";
+    const { [removeProp]: remove, ...rest } = ingredients;
+    this.setState({ ingredients: rest, totalPrice: price });
   }
 
   render() {
