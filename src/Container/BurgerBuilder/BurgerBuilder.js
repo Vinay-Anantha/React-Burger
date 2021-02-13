@@ -37,7 +37,8 @@ class BurgerBuilder extends Component {
         this.setState({ error: true });
       });
   }
-  updatePurchaseState = (ingredients) => {
+
+  shouldOrderNowBtnBeEnabled = (ingredients) => {
     const sum = Object.keys(ingredients)
       .map((igKey) => {
         return ingredients[igKey];
@@ -62,7 +63,7 @@ class BurgerBuilder extends Component {
       ingredients: updatedIngredients,
       totalPrice: newTotalPrice
     });
-    this.updatePurchaseState(updatedIngredients);
+    this.shouldOrderNowBtnBeEnabled(updatedIngredients);
   };
   removeIngredientHandler = (type) => {
     const oldCount = this.state.ingredients[type];
@@ -81,7 +82,7 @@ class BurgerBuilder extends Component {
       ingredients: updatedIngredients,
       totalPrice: newTotalPrice
     });
-    this.updatePurchaseState(updatedIngredients);
+    this.shouldOrderNowBtnBeEnabled(updatedIngredients);
   };
   orderNowBtnClickedHandler = () => {
     this.setState({ orderNowBtnClicked: true });
