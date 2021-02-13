@@ -7,7 +7,7 @@ import Backdrop from "../Backdrop/Backdrop";
 class Modal extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return (
-      nextProps.show !== this.props.show ||
+      nextProps.displayModal !== this.props.displayModal ||
       nextProps.children !== this.props.children
     );
   }
@@ -15,14 +15,16 @@ class Modal extends Component {
     return (
       <React.Fragment>
         <Backdrop
-          displayBackDrop={this.props.show}
+          displayBackDrop={this.props.displayModal}
           clicked={this.props.backDropClicked}
         />
         <div
           className={cssObj.Modal}
           style={{
-            transform: this.props.show ? "translateY(0)" : "translateY(-100vh)",
-            opacity: this.props.show ? "1" : "0"
+            transform: this.props.displayModal
+              ? "translateY(0)"
+              : "translateY(-100vh)",
+            opacity: this.props.displayModal ? "1" : "0"
           }}
         >
           {this.props.children}

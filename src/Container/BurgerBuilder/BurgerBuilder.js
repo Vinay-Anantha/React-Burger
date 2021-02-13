@@ -146,7 +146,7 @@ class BurgerBuilder extends Component {
     return (
       <React.Fragment>
         <Modal
-          show={this.state.orderNowBtnClicked}
+          displayModal={this.state.orderNowBtnClicked}
           backDropClicked={this.purchaseCancelHandler}
         >
           {orderSummary}
