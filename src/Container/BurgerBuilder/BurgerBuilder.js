@@ -86,10 +86,10 @@ class BurgerBuilder extends Component {
   orderNowBtnClickedHandler = () => {
     this.setState({ orderNowBtnClicked: true });
   };
-  purchaseCancelHandler = () => {
+  cancelAfterOrderNowHandler = () => {
     this.setState({ orderNowBtnClicked: false });
   };
-  purchaseContinueHandler = () => {
+  continueAfterOrderNowHandler = () => {
     const queryParams = [];
     for (let i in this.state.ingredients) {
       queryParams.push(
@@ -134,8 +134,8 @@ class BurgerBuilder extends Component {
       orderSummary = (
         <OrderSummary
           ingredients={this.state.ingredients}
-          cancelAfterOrderNow={this.purchaseCancelHandler}
-          continueAfterOrderNow={this.purchaseContinueHandler}
+          cancelAfterOrderNow={this.cancelAfterOrderNowHandler}
+          continueAfterOrderNow={this.continueAfterOrderNowHandler}
           price={this.state.totalPrice}
         />
       );
@@ -147,7 +147,7 @@ class BurgerBuilder extends Component {
       <React.Fragment>
         <Modal
           displayModal={this.state.orderNowBtnClicked}
-          backDropClicked={this.purchaseCancelHandler}
+          backDropClicked={this.cancelAfterOrderNowHandler}
         >
           {orderSummary}
         </Modal>
