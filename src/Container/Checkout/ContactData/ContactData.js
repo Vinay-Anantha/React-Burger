@@ -5,6 +5,9 @@ import axios from "../../../axios-orders";
 import Spinner from "../../../Components/UI/Spinner/Spinner";
 import Input from "../../../Components/UI/Input/Input";
 class ContactData extends Component {
+  componentDidMount() {
+    window && window.scrollTo(0, 1000);
+  }
   state = {
     orderForm: {
       name: {

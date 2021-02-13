@@ -17,8 +17,8 @@ class BurgerBuilder extends Component {
   state = {
     ingredients: null,
     totalPrice: 100,
-    purchaseable: false,
-    purchasing: false,
+    orderNowBtnEnabled: false,
+    orderNowBtnClicked: false,
     loading: false,
     error: false
   };
@@ -45,7 +45,7 @@ class BurgerBuilder extends Component {
       .reduce((prev, curr) => {
         return (prev += curr);
       }, 0);
-    this.setState({ purchaseable: sum > 0 });
+    this.setState({ orderNowBtnEnabled: sum > 0 });
   };
 
   addIngredientHandler = (type) => {
@@ -83,11 +83,11 @@ class BurgerBuilder extends Component {
     });
     this.updatePurchaseState(updatedIngredients);
   };
-  purchaseHandler = () => {
-    this.setState({ purchasing: true });
+  orderNowBtnClickedHandler = () => {
+    this.setState({ orderNowBtnClicked: true });
   };
   purchaseCancelHandler = () => {
-    this.setState({ purchasing: false });
+    this.setState({ orderNowBtnClicked: false });
   };
   purchaseContinueHandler = () => {
     const queryParams = [];
@@ -126,8 +126,8 @@ class BurgerBuilder extends Component {
             ingredientsRemoved={this.removeIngredientHandler}
             disabled={disabledInfo}
             price={this.state.totalPrice}
-            purchaseable={this.state.purchaseable}
-            ordered={this.purchaseHandler}
+            orderNowBtnEnabled={this.state.orderNowBtnEnabled}
+            ordered={this.orderNowBtnClickedHandler}
           />
         </React.Fragment>
       );
@@ -146,8 +146,8 @@ class BurgerBuilder extends Component {
     return (
       <React.Fragment>
         <Modal
-          show={this.state.purchasing}
-          modalClosed={this.purchaseCancelHandler}
+          show={this.state.orderNowBtnClicked}
+          backDropClicked={this.purchaseCancelHandler}
         >
           {orderSummary}
         </Modal>
