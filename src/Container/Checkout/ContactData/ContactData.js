@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import Button from "../../../Components/UI/Button/Button";
 import cssObj from "./ContactData.module.css";
 import axios from "../../../axios-orders";
 import Spinner from "../../../Components/UI/Spinner/Spinner";
 import Input from "../../../Components/UI/Input/Input";
+
 class ContactData extends Component {
   componentDidMount() {
     window && window.scrollTo(0, 1000);
@@ -105,7 +108,7 @@ class ContactData extends Component {
       formData[formElemID] = this.state.orderForm[formElemID].value;
     }
     const order = {
-      ingredients: this.props.ingredients,
+      ingredients: this.props.ings,
       price: this.props.price,
       orderData: formData
     };
@@ -117,6 +120,7 @@ class ContactData extends Component {
       })
       .catch((error) => this.setState({ loading: false }));
   };
+
   checkValidity(value, rules) {
     let isValid = true;
     if (!rules) {
@@ -208,5 +212,10 @@ class ContactData extends Component {
     );
   }
 }
-
-export default ContactData;
+const mapStateToProps = (state) => {
+  return {
+    ings: state.ingredients,
+    price: state.totalPrice
+  };
+};
+export default connect(mapStateToProps)(ContactData);
