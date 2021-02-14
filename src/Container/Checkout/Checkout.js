@@ -1,34 +1,22 @@
 import React, { Component } from "react";
-import CheckoutSummary from "../../Components/Order/CheckoutSummary/CheckoutSummary";
 import { Route } from "react-router-dom";
+
+import CheckoutSummary from "../../Components/Order/CheckoutSummary/CheckoutSummary";
 import ContactData from "./ContactData/ContactData";
+
 class Checkout extends Component {
   state = {
     ingredients: {},
     totalPrice: 0
   };
+
   checkoutCancelledHandler = () => {
     this.props.history.goBack();
   };
+
   checkoutContinuedHandler = () => {
     this.props.history.replace("/checkout/contact-data");
   };
-  componentDidMount() {
-    const query = new URLSearchParams(this.props.location.search);
-
-    const ingredients = {};
-    let price = 0;
-    for (let param of query.entries()) {
-      //["salsa","1"]
-      if (param[0] === "price") {
-        price = +param[1];
-      }
-      ingredients[param[0]] = +param[1];
-    }
-    const removeProp = "price";
-    const { [removeProp]: remove, ...rest } = ingredients;
-    this.setState({ ingredients: rest, totalPrice: price });
-  }
 
   render() {
     return (
