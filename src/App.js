@@ -8,13 +8,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Layout>
-          <Switch>
-            <Route path="/checkout" component={Checkout} />
-            <Route path="/orders" component={Orders} />
-            <Route path="/" exact component={BurgerBuilder} />
-          </Switch>
-        </Layout>
+        {/* <Layout>
+          Disabling  till nav is handled via redux
+        </Layout> */}
+        <Switch>
+          <Route path="/checkout" component={Checkout} />
+          <Route path="/orders" component={Orders} />
+          <Route path="/" exact component={BurgerBuilder} />
+        </Switch>
       </div>
     );
   }
